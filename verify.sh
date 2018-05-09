@@ -14,6 +14,6 @@ then
     then
         read -p "What is the path for the local git specification repo?" SPEC
     fi
-    (cd $SPEC && git worktree prune && git worktree add --force $ROOTDIR/.$VERSION $VERSION ) #origin/$VERSION )#> /dev/null 2>&1 )
+    (cd $SPEC && git worktree prune && git worktree add --force $ROOTDIR/.$VERSION origin/$VERSION ) #> /dev/null 2>&1 )
 fi
 $ROOTDIR/.$VERSION/verify.sh $FILENAME
